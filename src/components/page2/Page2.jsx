@@ -24,7 +24,7 @@ const Page2 = () => {
     <div className=' w-full min-h-screen flex flex-col justify-center items-center gap-10 ' >
          <form className=' w-[80%] md:w-1/2 lg:w-1/2 h-[6vh] rounded-full border-[1px] border-black flex justify-between items-center overflow-hidden px-4 ' >
 
-       <input type="text" value={search} placeholder='Saerch' onChange={handleSearchChange} className=' outline-none border-none  w-[80%]  ' />
+       <input type="text" value={search} placeholder='Saerch' onChange={handleSearchChange} className=' outline-none border-none  w-[80%] bg-transparent ' />
 
        </form>
 

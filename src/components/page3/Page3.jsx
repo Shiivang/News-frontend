@@ -14,7 +14,7 @@ const Page3 = () => {
 
          <div className='  w-[90%] min-h-[80%]  ' >
             <div className=' max-w-max p-3 mb-10  rounded-full border-[1px] border-black ' >
-      <select value={category} onChange={(e) => setCategory(e.target.value)} className=' outline-none  ' >
+      <select value={category} onChange={(e) => setCategory(e.target.value)} className=' outline-none bg-transparent ' >
         <option value="general">General</option>
         <option value="business">Business</option>
         <option value="technology">Technology</option>
