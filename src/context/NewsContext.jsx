@@ -18,7 +18,7 @@ const NewsContext = ({children}) => {
     const fatchNews = async () => {
         try {
           
-        const response = await axios.get("http://localhost:3000/" , {
+        const response = await axios.get("https://news-backend-terx.onrender.com/" , {
             params: {
                 search : search  ,
                 lang: 'en' , 
@@ -43,7 +43,7 @@ const NewsContext = ({children}) => {
   useEffect(() => {
     const fetchTopHeadlines = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/top-headlines', {
+        const response = await axios.get('https://news-backend-terx.onrender.com/top-headlines', {
           params: {
             category: category,
             lang: 'en',
