@@ -7,22 +7,27 @@ const Page2 = () => {
    
    
     const {news , search , setsearch , page, setpage ,  handleNextPage, handlePreviousPage,  arti } =  useContext(NEWSContext);
-//  console.log(news);
+
 
  const currentArticle = news ? news[page - 1] : null; 
  if (!currentArticle) {
    return <div>Loading article...</div>; 
  }
   
+ 
 
  const handleSearchChange = (e) => {
-    setsearch(e.target.value);  // Update search term in context
-    setpage(1);  // Reset page to 1 when searching
+    setsearch(e.target.value);  
+    setpage(1);  
   };
 
   return (
     <div className=' w-full min-h-screen flex flex-col justify-center items-center gap-10 ' >
-         <form className=' w-[80%] md:w-1/2 lg:w-1/2 h-[6vh] rounded-full border-[1px] border-black flex justify-between items-center overflow-hidden px-4 ' >
+         <form 
+         onSubmit={ (e) => {
+          e.preventDefault();
+         }}
+         className=' w-[80%] md:w-1/2 lg:w-1/2 h-[6vh] rounded-full border-[1px] border-black flex justify-between items-center overflow-hidden px-4 ' >
 
        <input type="text" value={search} placeholder='Saerch' onChange={handleSearchChange} className=' outline-none border-none  w-[80%] bg-transparent ' />
 
